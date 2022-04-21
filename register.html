@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<title> Sign up </title>
+<script>
+function validate()
+{
+var a = document.getElementById("t1").value;
+if(a==""){alert("Please enter your name");}
+
+var add = document.getElementById("a1").value;
+if(add==""){alert("Please enter address");}
+
+var pin = document.getElementById("p1").value;
+if(isNaN(pin) || pin.length!=6 ){alert("Enter a valid Pin code");}
+
+var phone = document.getElementById("y2").value;
+if(isNaN(phone) || phone.length!=10){alert("Enter a  phone number");}
+
+}
+</script>
+</head>
+<h1 style="color: white;">MOTIVE</h1>
+<body style="background-color: #FF4C68;">
+<form method="post">
+<table align="center" border=2 style="background-color: #4ED99C;">
+<caption>Sign up</caption>
+<tr>
+<td> Enter Name*</td>
+<td> <input type="text" id="t1"></td>
+</tr>
+<tr>
+    <td> Enter Email*</td>
+    <td><input type="email" name="email" id="y6"></td>
+    </tr>
+    <tr>
+        <td> Enter Phone Number*</td>
+        <td><input type="number" name="number" id="y2"></td>
+        </tr>
+        <tr>
+            <td> Enter Date of Birth</td>
+            <td><input type="date" name="DOB" id="y4"></td>
+        </tr>
+<tr>
+<tr>
+<td> Enter Address</td>
+<td> <textarea rows=2 cols=10 id="a1"></textarea></td>
+</tr>
+<tr>
+<tr>
+<td> Enter  Pincode</td>
+<td> <input type="text" maxlength=20 size=10 id="p1" ></td>
+</tr>
+<tr>
+<td> Enter Password</td>
+<td> <input type="password" maxlength=20 size=10></td>
+</tr>
+<tr>
+<td> Select gender</td>
+<td> <input type="radio" name="gender" >male<input type="radio" name="gender" >female<input type="radio" name="gender">other</td>
+</tr>
+<tr>
+<td> Select language</td>
+<td> <input type="checkbox" >hindi<input type="checkbox" >English</td>
+</tr>
+<tr>
+<td> Select country</td>
+<td> <select name="dropdown" ><option></option><option selected label="INDIA" ></option><option >USA</option><option label="UK"></option></select></td>
+</tr>
+<tr>
+    <td>OTP</td>
+    <td><input type="text" name="text" id="y3"></td>
+</tr>
+
+<tr>
+<td colspan=2 align="center"><input type="button" value="submit" onclick="validate()" style="background-color: #ffa04c;"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
